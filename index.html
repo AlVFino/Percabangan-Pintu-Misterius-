@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percabangan</title>
+</head>
+<body>
+    <script>
+        function pintuOne() {
+           let jawaban = prompt("Bearapa Hasil dari 10!");
+           
+           if( jawaban == 3628800){
+            alert("Jawaban Benar!");
+           }else{
+            alert("Jawaban Salah!");
+           }
+        }
+
+        function pintuTwo() {
+            let aksi = prompt("Monster ingin menyerang. apakah akan melawan atau kabur.");
+            var random = Math.random();
+            if(aksi == "melawan" && random < 0.5){
+                alert("monster kalah");
+                alert("Kamu Menang");
+            }else{
+                alert("monster Menyerah");
+                alert("Kamu kalah");
+            }
+        }
+
+        function pintuThree() {
+            let labirin = alert("kita masuk kedalam labirin pecahkan teka-teki untuk keluar dari labirinnya");
+
+            let benar = 0;
+            let salah = 0;
+
+            let hasil = [];
+            function tekaTeka1() {
+            let soal1 = prompt("saat kita menghadap ke arah timur lalu saat balik kanan sebanyak 2 kali kita menghadap mana lagi");
+
+            if(soal1 == "timur"){
+                benar++;
+            }else{
+                salah++;
+            }
+            }
+
+            function tekaTeka2() {
+            let soal2 = prompt("kita menghadap ke arah utara lalu saat balik kanan sebanyak 2 kali kita menghadap mana lagi");
+
+            if(soal2 == "utara"){
+                benar++;
+            }else{
+                salah++;
+            }
+            }
+
+            function tekaTeka3() {
+            let soal3 = prompt("kita menghadap ke arah selatan lalu saat balik kanan sebanyak 2 kali kita menghadap mana lagi");
+
+            if(soal3 == "selatan"){
+                benar++;
+            }else{
+                salah++; 
+            }
+            }
+
+            tekaTeka1();
+            tekaTeka2();
+            tekaTeka3();
+
+            alert(`hasil ${benar} benar dan ${salah} salah`);
+            for(let i = 0; i < hasil.length; i++){
+                alert(hasil[i]);
+            }
+            if (benar === 3) {
+                alert("Selamat, kamu berhasil keluar dari labirin!");
+            } else {
+                alert("Maaf, kamu tidak berhasil keluar dari labirin. Coba lagi!");
+            }
+        }
+
+       
+
+        let pilihan =prompt("Simulasi Pintu Misterius \n \nSilahkan pilih satu dari tiga pintu: Pintu 1, Pintu 2, atau Pintu 3\n ketikan pilihan dengan benar");
+
+        if (pilihan == "Pintu 1") {
+            pintuOne();
+            location.reload();
+        } else if (pilihan  == "Pintu 2") {
+            pintuTwo();
+            location.reload();
+        }
+        else if(pilihan == "Pintu 3") {
+            pintuThree();
+            location.reload();
+        }else {
+            alert("masukan pintu 1, 2, atau 3");
+            location.reload();
+        }
+       
+
+    </script>
+</body>
+</html>
