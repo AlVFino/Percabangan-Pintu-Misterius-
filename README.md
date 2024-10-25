@@ -1,1 +1,3 @@
-Hasil Gabut Belajar Percabangan JS
+HALLO
+Namaku Adalah Vino
+Salam Kenal
